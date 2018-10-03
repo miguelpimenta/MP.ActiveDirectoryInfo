@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ActiveDirectoryInfo", "M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.Support", "MP.Support\MP.Support.csproj", "{099A8CF1-7E31-4259-972E-9279A3AC7D9F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MP.ActiveDirectoryInfo.Tests", "MP.ActiveDirectoryInfo.Tests\MP.ActiveDirectoryInfo.Tests.csproj", "{EB55B8C8-8E43-4992-9621-A3FC03873C10}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{099A8CF1-7E31-4259-972E-9279A3AC7D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{099A8CF1-7E31-4259-972E-9279A3AC7D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{099A8CF1-7E31-4259-972E-9279A3AC7D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB55B8C8-8E43-4992-9621-A3FC03873C10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB55B8C8-8E43-4992-9621-A3FC03873C10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB55B8C8-8E43-4992-9621-A3FC03873C10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB55B8C8-8E43-4992-9621-A3FC03873C10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
