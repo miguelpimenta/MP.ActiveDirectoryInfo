@@ -1,0 +1,28 @@
+﻿<controls:MetroWindow
+    x:Class="MP.ActiveDirectoryInfo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
+    Title="MainWindow"
+    Width="1000"
+    Height="600"
+    dialog:DialogParticipation.Register="{Binding}"
+    Background="{StaticResource GradientColorDefault}"
+    DataContext="{Binding Source={StaticResource ViewModelLocator}, Path=MainVM}"
+    WindowState="Maximized">
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding LoadedCmd}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
+
+    <Grid>
+        <TabControl Background="Transparent">
+            <TabItem Width="100" Header="Users" />
+            <TabItem MinWidth="100" Header="Computers" />
+        </TabControl>
+    </Grid>
+</controls:MetroWindow>
