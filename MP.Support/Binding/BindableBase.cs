@@ -25,7 +25,9 @@ namespace MP.Support
         protected bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
         {
             if (Equals(storage, value))
+            {
                 return false;
+            }
 
             storage = value;
             this.OnPropertyChanged(propertyName);
@@ -41,6 +43,17 @@ namespace MP.Support
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        /// <summary>
+        /// Notifies listeners that a property value has changed.
+        /// </summary>
+        /// <param name="propertyName">Name of the property used to notify listeners.  This
+        /// value is optional and can be provided automatically when invoked from compilers
+        /// that support <see cref="CallerMemberNameAttribute"/>.</param>
+        protected void RaisePropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
 }
